@@ -13,5 +13,16 @@ function speak(text){
 function wishMe(){
     let day=new Date()
     let hours=day.getHours()
-    console.log(hours)
+    if(hours>=0 && hours<12){
+        speak("Good morning Sir")
+    }
+    else if(hours>=12 && hours<16){
+        speak("Good afternoon Sir")
+    }
+    else{
+        speak("Good Evening Sir")
+    }
 }
+window.addEventListener('load' ,()=>{
+    wishMe()
+})
